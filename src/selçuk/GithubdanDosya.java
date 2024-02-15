@@ -1,4 +1,0 @@
-package selçuk;
-class GithubdanDosya {
-
-}

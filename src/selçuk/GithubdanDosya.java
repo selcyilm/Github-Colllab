@@ -1,1 +1,4 @@
-githubtdan eklediğim dosya
+package selçuk;
+class GithubdanDosya {
+
+}

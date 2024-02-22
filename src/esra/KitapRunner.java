@@ -32,13 +32,12 @@ public class KitapRunner {
     */
 
 
-    static List<KitapFields> kitapListesi = new ArrayList<>(); // Bos Bir liste
+    //static List<KitapFields> kitapListesi = new ArrayList<>(); // Bos Bir liste
 
 
     public static void main(String[] args) {
 
         KitapMethods.kitaplarListesi();
-        System.out.println(kitapListesi.toString());
-        KitapMethods.menu(kitapListesi);
+        KitapMethods.menu();
     }
 }

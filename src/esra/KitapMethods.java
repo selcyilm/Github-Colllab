@@ -11,7 +11,8 @@ public class KitapMethods {
     static int kitapNo = 1000;
 
     static List<KitapFields> kitapListesi = new ArrayList<>(); // Bos Bir liste
-    public static void menu(List<KitapFields> kitapListesi) {
+
+    public static void menu() {
 
         System.out.println("====================KITAP PROGRAMI==========================");
         System.out.println("1: Kitap ekle\n" +
@@ -19,7 +20,7 @@ public class KitapMethods {
                 "3: Tum kitaplari listele\n" +
                 "4: Bitir");
         System.out.print("Tercihinizi giriniz: ");
-        System.out.println(kitapListesi.toString());
+        //System.out.println(kitapListesi.toString());
         int tercih = scanner.nextInt();
 
         switch (tercih) {
@@ -38,7 +39,7 @@ public class KitapMethods {
                 break;
             default:
                 System.out.println("Hatali giris yaptiniz. Tekrar deneyiniz.");
-                menu(kitapListesi);
+                menu();
 
         }
 
@@ -53,7 +54,7 @@ public class KitapMethods {
             System.out.println(k.toString());
         }
 
-        menu(kitapListesi);
+        menu();
 
     }
 
@@ -68,12 +69,12 @@ public class KitapMethods {
                 kitapListesi.remove(k);
                 System.out.println(k.getKitapAdi() + " isimli kitap silinmistir.");
                 kitapListele(kitapListesi);
-                menu(kitapListesi);
+                menu();
             }
 
         }
         System.out.println("Girmis oldugunuz numarayla eslesen bir kitap bulunmamaktadir.");
-        menu(kitapListesi);
+        menu();
 
     }
 
@@ -91,8 +92,8 @@ public class KitapMethods {
 
         KitapFields kitap = new KitapFields(++kitapNo, kitapAdi, yazarAdi, yayinYili, fiyat);
         kitapListesi.add(kitap);
-        System.out.println(kitap.toString());
-        menu(kitapListesi);
+        //System.out.println(kitap.toString());
+        menu();
     }
 
     private static void bitir() {
